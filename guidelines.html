@@ -1,0 +1,72 @@
+<h1 id="instructions">Instructions</h1>
+<br>
+
+<p>&nbsp;Given three images, A, A' and B, You will need to answer: <br>&nbsp;Which candidate (B') out of {C1, C2, C3, C4} is similar to B the same way A' is similar to A?</p>
+<p>&nbsp;To answer it, you'll need to choose a candidate:<ol>
+  <li>&nbsp;&nbsp;(1) understand what is the <u>key difference</u> between A and A'</li>
+  <li>&nbsp;&nbsp;(2) map this difference to B</li>
+  <li>&nbsp;&nbsp;(3) <u>Verify</u>: B → B' has the same difference as A → A'</li>
+</ol>
+</p>
+<br>
+<p>&nbsp;The main difference between the images, can be one of the semantic roles in the image: (1) verb; (2) agent; (3) item; (4) vehicle; (5) victim; (6) tool; (7) food; </p>
+
+<br>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<h2>&nbsp;Agent examples:</h2>
+<br>
+<p>&nbsp;The agent answers the question "Who is doing something in the image". For example in image A' below, the agent is a <u>cat</u>.</p>
+<br> 
+<h3>&nbsp;Agent - Example 1:</h3>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/11_agent_21326_empty.png?raw=true" alt=""><br>
+	<strong>&nbsp;Difference A,A'</strong>: A <u>child</u> urinating, changed to <u>cat</u> urinating. agent changed: child → cat<br>
+	<strong>&nbsp;Map difference to B</strong>: <u>child</u> lying in a hospital bed → <u>cat</u> in a hospital bed<br>
+	<strong>&nbsp;Answer</strong>: C4 (It contains: <u>cat</u> in a hospital bed)<br>
+	<strong>&nbsp;Additional explaination</strong>: Why difference A, A' is child → cat and not female child → cat? <u>Answer</u>: B should contain the same agent as A. They both contain a <u>child</u>.<br>
+	<br>
+<h3>&nbsp;Agent - Example 2:</h3>
+<p>&nbsp;You can try solving the analgoy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/14_agent_6053_empty.png?raw=true" alt=""><br>
+	<strong>&nbsp;Difference A,A'</strong>: A <u>car</u> drifting, changed to <u>motorcycle</u> drifting. agent changed: motorcycle → car<br>
+	<strong>&nbsp;Map difference to B</strong>: <u>car</u> crash → <u>motorcycle</u> crash<br>
+	<strong>&nbsp;Answer</strong>: C4 (It contains: <u>motorcycle</u> crash)<br>
+	<strong>&nbsp;Additional explaination</strong>: C3 also contain motorcycle. However it doesn't seem to crash, and we need B' to be similar to B except the single change of motorcycle → car, meaning that the answer should contain motorcycle crashing.<br>
+	<br>
+
+<h2>&nbsp;Verb examples:</h2>
+<br>
+<p>&nbsp;The verb answers the question "What activity is described in the image". For example in image A below, the verb is a <u>shivering</u>.</p>
+<br> 
+<h3>&nbsp;Verb - Example 1:</h3>
+<p>&nbsp;You can try solving the analgoy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/2_verb_12666_empty.png?raw=true" alt=""><br>
+	<strong>&nbsp;Difference A,A'</strong>: A woman <u>shivering</u>, changed to woman <u>smiling</u>. verb changed: shivering → smiling<br>
+	<strong>&nbsp;Map difference to B</strong>: man <u>shivering</u> → man <u>smiling</u><br>
+	<strong>&nbsp;Answer</strong>: C2 (It contains: man <u>smiling</u>)<br>
+	<strong>&nbsp;Additional explaination</strong>: C1 also contain person smiling. However it is not a <u>man</u> like in B. We need B' to be similar to B except the single change of shivering → smiling, meaning that the answer should contain a man smiling.<br>
+	<br>
+<h3>&nbsp;Verb - Example 2:</h3>
+<p>&nbsp;You can try solving the analgoy before seeing the answer</p><br>
+<p><img class="center-fit" src="https://github.com/yonatanbitton/vasr_mturk_examples/blob/main/examples/guidelines_examples/8_verb_4579_empty.png?raw=true" alt=""><br>
+	<strong>&nbsp;Difference A,A'</strong>: A man <u>frowning</u>, changed to man <u>whirling</u>. verb changed: frowning → whirling<br>
+	<strong>&nbsp;Map difference to B</strong>: girl <u>frowning</u> → girl <u>whirling</u><br>
+	<strong>&nbsp;Answer</strong>: C3 (It contains: girl <u>whirling</u>)<br>
+	<br>
